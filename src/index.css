@@ -1,18 +1,39 @@
 * {
-   margin: 0;
-   box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 body {
- --slack-color: #3f0f40;
- overflow: hiden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  --slack-color: #3f0f40;
+  overflow: hiden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: all ease-in 0.3s;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.MuiSvgIcon-root {
+  color: white;
+}
+
+@media screen and (max-width: 337px) {
+  body,
+  ::placeholder {
+    font-size: 0.625rem !important;
+  }
+
+  .MuiSvgIcon-root {
+    font-size: 1rem !important;
+  }
+
+  .MuiAvatar-root {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 1rem !important;
+  }
 }
