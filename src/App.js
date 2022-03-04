@@ -1,16 +1,20 @@
 import React from "react";
-import "./App.css";
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
+import styled from "styled-components";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <div className="app">
       <Router>
         <>
-          <Routes>
-            <Route path="/" exact element={<Header />}></Route>
-          </Routes>
+          <Header />
+          <AppBody>
+            <Sidebar />
+            <Routes>{/* <Route path="/" exact element={}/> */}</Routes>
+          </AppBody>
         </>
       </Router>
     </div>
@@ -18,3 +22,8 @@ function App() {
 }
 
 export default App;
+
+const AppBody = styled.div`
+  display: flex;
+  height: 100vh;
+`;

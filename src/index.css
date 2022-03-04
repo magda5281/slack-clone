@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all ease-in 0.3s;
+  color: white;
 }
 
 code {
@@ -21,8 +22,10 @@ code {
   color: white;
 }
 
-@media screen and (max-width: 337px) {
+@media screen and (max-width: 565px) {
   body,
+  h2,
+  h3,
   ::placeholder {
     font-size: 0.625rem !important;
   }
