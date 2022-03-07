@@ -1,10 +1,4 @@
-// import firebase from "firebase/compat/app";
-// import "firebase/compat/auth";
-// import "firebase/compat/firestore";
-
 import firebase from "firebase/compat/app";
-// import "firebase/auth";
-// import "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
@@ -28,5 +22,5 @@ const db = getFirestore(firebaseApp);
 const auth = getAuth(firebaseApp);
 // const provider = new firebase.auth.GoogleAuthProvider();
 const provider = new GoogleAuthProvider();
-provider.setCustomParameters({ prompt: "select_account" });
+// provider.setCustomParameters({ prompt: "select_account" });
 export { db, auth, provider };
