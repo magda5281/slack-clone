@@ -3,19 +3,10 @@ import styled from "styled-components";
 import { db } from "../firebase.js";
 import { collection, addDoc } from "firebase/firestore";
 
-import { useCollection } from "react-firebase-hooks/firestore";
-
-function SidebarOption({ Icon, title, addChannelOption }) {
-  const [channels, loading, error] = useCollection(collection(db, "/rooms"));
-  console.log(channels);
-
+function SidebarOption({ Icon, title, addChannelOption, id }) {
   const addChannel = () => {
     const channelName = prompt("Enter the channel name");
     if (channelName) {
-      // db.collection("/rooms")
-      //   .add({
-      //     name: channelName,
-      //   })
       addDoc(collection(db, "rooms"), {
         name: channelName,
       })
@@ -63,4 +54,7 @@ const SidebarOptionContainer = styled.div`
     padding: 1rem;
   }
 `;
-const SidebarOptionChannel = styled.div``;
+const SidebarOptionChannel = styled.h3`
+  font-weight: 300;
+  padding: 0.625rem;
+`;
