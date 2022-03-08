@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import styled from "styled-components";
+import { SidebarOptionContainer, SidebarOptionChannel } from "./SidebarOption.style.js";
 import { db } from "../firebase.js";
 import { collection, addDoc } from "firebase/firestore";
 import { enterRoom } from "../features/appSlice.js";
@@ -46,26 +46,3 @@ function SidebarOption({ Icon, title, addChannelOption, id }) {
 }
 
 export default SidebarOption;
-
-const SidebarOptionContainer = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: 0.825rem;
-  cursor: pointer;
-  :hover {
-    opacity: 0.8;
-    background-color: #340e36;
-  }
-
-  > h3 {
-    font-weight: 500;
-  }
-
-  > h3 > span {
-    padding: 1rem;
-  }
-`;
-const SidebarOptionChannel = styled.h3`
-  font-weight: 300;
-  padding: 0.625rem;
-`;
