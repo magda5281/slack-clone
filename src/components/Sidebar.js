@@ -1,6 +1,9 @@
 import React from "react";
 import { SidebarContainer, SidebarHeader, SidebarInfo } from "./Siderbar.style.js";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { collection } from "firebase/firestore";
+import { db } from "../firebase.js";
 import CreateIcon from "@mui/icons-material/Create";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
 import InboxIcon from "@mui/icons-material/Inbox";
@@ -13,9 +16,6 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
 import SidebarOption from "./SidebarOption.js";
-import { useCollection } from "react-firebase-hooks/firestore";
-import { collection } from "firebase/firestore";
-import { db } from "../firebase.js";
 
 function Sidebar() {
   const [channels, loading, error] = useCollection(collection(db, "rooms"));
