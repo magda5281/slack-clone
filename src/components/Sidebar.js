@@ -18,9 +18,7 @@ import { collection } from "firebase/firestore";
 import { db } from "../firebase.js";
 
 function Sidebar() {
-  const [channels, loading, error] = useCollection(collection(db, "rooms"), {
-    snapshotListenOptions: { includeMetadataChanges: true },
-  });
+  const [channels, loading, error] = useCollection(collection(db, "rooms"));
 
   return (
     <SidebarContainer>
