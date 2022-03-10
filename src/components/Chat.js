@@ -8,7 +8,14 @@ import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { db } from "../firebase";
 import { collection, doc, query, orderBy } from "firebase/firestore";
 import Message from "./Message";
-import { ChatContainer, ChatMessages, Header, HeaderLeft, HeaderRight } from "./Chat.style.js";
+import {
+  ChatContainer,
+  ChatMessages,
+  Header,
+  HeaderLeft,
+  HeaderRight,
+  ChatBottom,
+} from "./Chat.style.js";
 
 function Chat() {
   const roomId = useSelector(selectRoomId);
@@ -38,19 +45,21 @@ function Chat() {
       <ChatMessages>
         {roomMessages &&
           roomMessages.docs.map((doc) => {
-            const { message, timestamp, user, userImage } = doc;
-
+            const { message, timestamp, user, userImage } = doc.data();
+            const time = timestamp?.toDate().toUTCString();
             return (
               <Message
                 key={doc.id}
                 message={message}
-                timestamp={timestamp}
+                timestamp={time}
                 user={user}
                 userImage={userImage}
               />
             );
           })}
+        <ChatBottom />
       </ChatMessages>
+
       <ChatInput channelName={roomDetails?.data().name} channelId={roomId} />
     </ChatContainer>
   );

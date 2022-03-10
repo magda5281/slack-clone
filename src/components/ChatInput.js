@@ -5,25 +5,21 @@ import { ChatInputContainer } from "./ChatInput.style.js";
 import { Button } from "@material-ui/core";
 function ChatInput({ channelName, channelId }) {
   const [input, setInput] = useState("");
+
   const sendMessage = (e) => {
     e.preventDefault();
     if (!channelId) {
       return false;
     }
 
-    addDoc(collection(db, "/rooms", channelId, "messages"), {
-      // message: inputRef.current.value,
+    const messageRef = addDoc(collection(db, "/rooms", channelId, "messages"), {
       message: input,
       timestamp: serverTimestamp(),
       user: "Magda Gozdalik",
-      userImage: "https://icon-library.com/images/avatar-icon-png/avatar-icon-png-10.jpg",
+      userImage:
+        "https://images.unsplash.com/photo-1646673940197-dbf528eea559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     });
-
-    // v8
-    // db.collection("/rooms").doc(channelId).collection("/messages").add({
-    //   message: inputRef.current.value,
-    // });
-
+    console.log(messageRef);
     setInput("");
   };
 

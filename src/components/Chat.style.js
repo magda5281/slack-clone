@@ -43,3 +43,5 @@ export const ChatContainer = styled.div`
   color: var(--slack-color);
   margin-top: 4em;
 `;
+
+export const ChatBottom = styled.div``;
