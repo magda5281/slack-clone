@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { MessageContainer, MessageInfo } from "./Message.style.js";
 
 function Message({ message, timestamp, user, userImage }) {
+  console.log(userImage);
   return (
     <MessageContainer>
       <img src={userImage} alt="user image" />
@@ -17,26 +19,3 @@ function Message({ message, timestamp, user, userImage }) {
 }
 
 export default Message;
-
-// TO DO: transfer to separate file
-
-const MessageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 1.25em;
-  > img {
-    max-width: 100%;
-    display: block;
-    height: clamp(20px, 5vmin, 50px);
-    border-radius: 10px;
-  }
-`;
-const MessageInfo = styled.div`
-  padding-left: 0.625em;
-  > h4 > span {
-    color: gray;
-    font-weight: 300;
-    font-size: 0.625rem;
-    padding-left: 0.3em;
-  }
-`;

@@ -37,6 +37,16 @@ export const HeaderLeft = styled.div`
   align-items: center;
   padding: 0 1em 0 0;
   justify-content: space-between;
+  > svg:nth-child(3) {
+    margin-left: clamp(15px, 50vmin, 200px);
+  }
+  > svg:nth-child(2) {
+    cursor: pointer;
+    :hover {
+      opacity: 0.8;
+      background-color: #340e36;
+    }
+  }
 `;
 
 export const HeaderAvatar = styled(Avatar)`
