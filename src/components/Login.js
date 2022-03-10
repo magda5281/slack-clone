@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { auth, provider } from "../firebase.js";
 import { signInWithPopup } from "firebase/auth";
+
 function Login() {
   const signIn = (e) => {
     e.preventDefault();

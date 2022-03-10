@@ -1,9 +1,11 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { SidebarContainer, SidebarHeader, SidebarInfo } from "./Siderbar.style.js";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collection } from "firebase/firestore";
-import { db } from "../firebase.js";
+import { auth, db } from "../firebase.js";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import CreateIcon from "@mui/icons-material/Create";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
 import InboxIcon from "@mui/icons-material/Inbox";
@@ -19,15 +21,15 @@ import SidebarOption from "./SidebarOption.js";
 
 function Sidebar() {
   const [channels, loading, error] = useCollection(collection(db, "rooms"));
-
+  const [user] = useAuthState(auth);
   return (
     <SidebarContainer>
       <SidebarHeader>
         <SidebarInfo>
-          <h2>Magda Slack </h2>
+          <h2>{user?.displayName}</h2>
           <h3>
             <FiberManualRecordIcon />
-            Magda Gozdalik
+            {user?.displayName}
           </h3>
         </SidebarInfo>
         <CreateIcon />

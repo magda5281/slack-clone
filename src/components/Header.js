@@ -1,4 +1,6 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase.js";
 import {
   HeaderContainer,
   HeaderLeft,
@@ -9,14 +11,15 @@ import {
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import SearchIcon from "@mui/icons-material/Search";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import { signOut } from "firebase/auth";
 
 function Header() {
+  const [user] = useAuthState(auth);
+
   return (
     <HeaderContainer>
       <HeaderLeft>
-        <HeaderAvatar
-        // TO DO: Add onclick
-        />
+        <HeaderAvatar src={user?.photoURL} alt={user?.displayName} onClick={() => auth.signOut()} />
         <AccessTimeIcon />
       </HeaderLeft>
       <HeaderSearch>
