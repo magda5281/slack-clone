@@ -44,4 +44,6 @@ export const ChatContainer = styled.div`
   margin-top: 4em;
 `;
 
-export const ChatBottom = styled.div``;
+export const ChatBottom = styled.div`
+  padding-bottom: 10em;
+`;
