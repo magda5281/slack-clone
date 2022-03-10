@@ -11,6 +11,7 @@ import Login from "./components/Login";
 
 function App() {
   //pass the authentication object into useAuthstate from firebase
+  //when you sign in on login page that hook takes auth from firebase and logs you in as a user
   const [user, loading] = useAuthState(auth);
   console.log(user);
   return (

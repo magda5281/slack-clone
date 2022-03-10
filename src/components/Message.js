@@ -18,6 +18,8 @@ function Message({ message, timestamp, user, userImage }) {
 
 export default Message;
 
+// TO DO: transfer to separate file
+
 const MessageContainer = styled.div`
   display: flex;
   align-items: center;

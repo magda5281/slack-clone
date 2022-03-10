@@ -22,6 +22,11 @@ code {
   color: white;
 }
 
+img {
+  max-width: 100%;
+  /* display: block; */
+}
+
 @media screen and (max-width: 565px) {
   body,
   h2,
