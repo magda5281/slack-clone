@@ -13,10 +13,11 @@ export const ChatInputContainer = styled.div`
     position: fixed;
     bottom: 2.5em;
     width: 60vw;
-    min-width: 40vmin;
-    border: 1px solid gray;
+    min-width: 0;
+    border: 1px solid var(--color-accent-200);
     border-radius: 3px;
-    padding: 1.3em;
+    font-size: 0.625rem;
+    padding: 1em;
     outline: none;
   }
   form > button {

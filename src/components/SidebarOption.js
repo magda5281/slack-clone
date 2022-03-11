@@ -12,13 +12,9 @@ function SidebarOption({ Icon, title, addChannelOption, id }) {
     if (channelName) {
       addDoc(collection(db, "rooms"), {
         name: channelName,
-      })
-        .then(function () {
-          console.log("Value successfully written!");
-        })
-        .catch(function (error) {
-          console.error("Error writing Value: ", error);
-        });
+      }).catch(function (error) {
+        console.error("Error writing Value: ", error);
+      });
     }
   };
   const selectChannel = () => {

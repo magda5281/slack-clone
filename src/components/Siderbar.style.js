@@ -4,12 +4,12 @@ export const SidebarContainer = styled.div`
   background-color: var(--slack-color);
   color: white;
   flex: 0.3;
-  border-top: 1px solid #49274b;
+  border-top: 1px solid var(--color-accent-400);
   max-width: 260px;
   margin-top: 55px;
   > hr {
     margin: 0.6em 0;
-    border: 1px solid #49274b;
+    border: 0.5px solid var(--color-accent-400);
   }
   @media screen and (max-width: 565px) {
     margin-top: 30px;

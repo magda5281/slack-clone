@@ -5,7 +5,7 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 1.2em;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid var(--color-accent-100);
 `;
 
 export const HeaderLeft = styled.div`

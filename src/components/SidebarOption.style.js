@@ -7,7 +7,7 @@ export const SidebarOptionContainer = styled.div`
   cursor: pointer;
   :hover {
     opacity: 0.8;
-    background-color: #340e36;
+    background-color: var(--bg-color-slack-hover);
   }
 
   > h3 {

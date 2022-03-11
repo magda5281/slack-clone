@@ -4,7 +4,7 @@ import { Avatar } from "@material-ui/core";
 export const HeaderContainer = styled.div`
   display: flex;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   align-items: center;
   justify-content: space-between;
   background-color: var(--slack-color);
@@ -13,21 +13,36 @@ export const HeaderContainer = styled.div`
 export const HeaderSearch = styled.div`
   opacity: 1;
   border-radius: 6px;
-  background-color: #421f44;
+  background-color: var(--bg-color-slack-secondary);
   text-align: center;
-  flex: 0.4;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: grey;
-  border: 1px solid grey;
+  color: var(--color-accent-200);
+  border: 1px solid var(--color-accent-200);
+  flex: 0.5;
+  @media screen and (max-width: 315px) {
+    flex: 0.8;
+  }
+
   > input {
     background-color: transparent;
     border: none;
     text-align: center;
-    min-width: 30vw;
     outline: none;
     color: white;
+    flex: 0.8;
+
+    @media screen and (max-width: 315px) {
+      width: 10vmin;
+    }
+  }
+  > ::placeholder {
+    font-size: 0.625rem;
+  }
+
+  > .MuiSvgIcon-root {
+    flex: 0.2;
   }
 `;
 
@@ -35,23 +50,28 @@ export const HeaderLeft = styled.div`
   display: flex;
   flex: 0.3;
   align-items: center;
-  padding: 0 1em 0 0;
-  justify-content: space-between;
-  > svg:nth-child(3) {
-    margin-left: clamp(15px, 50vmin, 200px);
-  }
+
   > svg:nth-child(2) {
+    margin-right: 0.5em;
+  }
+`;
+export const HeaderLeftLeft = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 1;
+  > .MuiSvgIcon-root {
+    margin-right: 1em;
     cursor: pointer;
     :hover {
       opacity: 0.8;
-      background-color: #340e36;
+      background-color: var(--bg-color-slack-hover);
     }
   }
 `;
 
 export const HeaderAvatar = styled(Avatar)`
   cursor: pointer;
-  margin-right: 0.625em;
+  margin-right: 1em;
   transition: opacity ease-in-out 0.3s;
 
   :hover {
@@ -60,9 +80,9 @@ export const HeaderAvatar = styled(Avatar)`
 `;
 
 export const HeaderRight = styled.div`
-  flex: 0.3;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-left: 0.625em;
+  flex: 0.2;
 `;

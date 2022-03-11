@@ -13,7 +13,7 @@ export const MessageContainer = styled.div`
 export const MessageInfo = styled.div`
   padding-left: 0.625em;
   > h4 > span {
-    color: gray;
+    color: var(--color-accent-200);
     font-weight: 300;
     font-size: 0.625rem;
     padding-left: 0.3em;

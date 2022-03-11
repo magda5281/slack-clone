@@ -1,13 +1,13 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Header from "./components/Header";
-import styled from "styled-components";
-import Sidebar from "./components/Sidebar";
-import Chat from "./components/Chat";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Chat from "./components/Chat";
 import Login from "./components/Login";
+import { AppBody, AppLoading, AppLoadingContents } from "./App.style.js";
 
 function App() {
   //pass the authentication object into useAuthstate from firebase
@@ -47,29 +47,3 @@ function App() {
 }
 
 export default App;
-
-const AppLoading = styled.div`
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  width: 100%;
-`;
-
-const AppLoadingContents = styled.div`
-  /* text-align: center; */
-  /* padding-bottom: 6em; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  > img {
-    object-fit: contain;
-    height: clamp(50px, 12vmin, 100px);
-    margin-bottom: 3em;
-  }
-`;
-
-const AppBody = styled.div`
-  display: flex;
-  height: 100vh;
-`;

@@ -7,19 +7,29 @@ import {
   HeaderSearch,
   HeaderRight,
   HeaderAvatar,
+  HeaderLeftLeft,
 } from "./Header.style.js";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import SearchIcon from "@mui/icons-material/Search";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { signOut } from "firebase/auth";
 
 function Header() {
   const [user] = useAuthState(auth);
-
+  console.log(user?.photoURL);
   return (
     <HeaderContainer>
       <HeaderLeft>
-        <HeaderAvatar src={user?.photoURL} alt={user?.displayName} onClick={() => auth.signOut()} />
+        <HeaderLeftLeft>
+          <HeaderAvatar
+            src={user?.photoURL}
+            alt={user?.displayName}
+            // referrerPolicy="no-referrer" //to prevent img error with the google sign in ??? as sometimes img loads and sometimes it doesn't
+          />
+          <LogoutIcon onClick={() => signOut(auth)} />
+        </HeaderLeftLeft>
+
         <AccessTimeIcon />
       </HeaderLeft>
       <HeaderSearch>

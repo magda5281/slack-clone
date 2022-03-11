@@ -3,8 +3,19 @@
   box-sizing: border-box;
 }
 
-body {
+:root {
   --slack-color: #3f0f40;
+  --bg-color-slack-secondary: #421f44;
+  --bg-color-slack-hover: #340e36;
+  --bg-color-0: white;
+  --bg-color-100: #f8f8f8;
+  --bg-color-accent: green;
+
+  --color-accent-100: lightgray;
+  --color-accent-200: grey;
+  --color-accent-400: #49274b;
+}
+body {
   overflow: hiden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

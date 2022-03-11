@@ -20,7 +20,7 @@ function ChatInput({ channelName, channelId, chatRef }) {
       message: input,
       timestamp: serverTimestamp(),
       user: user?.displayName,
-      userImage: user.photoURL,
+      userImage: user?.photoURL,
     });
 
     chatRef?.current.scrollIntoView({ behaviour: "smooth" });
