@@ -22,7 +22,7 @@ This project was created using the following technologies:
 - Firebase (v9 modular)
 - Material-ui
 
-  ![](https://res.cloudinary.com/practicaldev/image/fetch/s--pvrcwKD5--/c_imagga_scale,f_auto,fl_progressive,h_48,q_auto,w_48/https://dev-to-uploads.s3.amazonaws.com/i/x31w2x9njuj19e9xb00t.png)
+  ![](https://dev-to-uploads.s3.amazonaws.com/i/x31w2x9njuj19e9xb00t.png)
   ![](https://img.icons8.com/color/48/000000/javascript--v1.png)
   ![](https://img.icons8.com/office/40/000000/react.png)
   ![](https://img.icons8.com/color/48/000000/redux.png")
