@@ -17,7 +17,7 @@ import { signOut } from "firebase/auth";
 
 function Header() {
   const [user] = useAuthState(auth);
-  console.log(user?.photoURL);
+
   return (
     <HeaderContainer>
       <HeaderLeft>

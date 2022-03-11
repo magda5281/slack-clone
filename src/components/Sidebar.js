@@ -22,6 +22,7 @@ import SidebarOption from "./SidebarOption.js";
 function Sidebar() {
   const [channels, loading, error] = useCollection(collection(db, "rooms"));
   const [user] = useAuthState(auth);
+
   return (
     <SidebarContainer>
       <SidebarHeader>

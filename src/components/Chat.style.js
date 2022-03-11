@@ -45,5 +45,5 @@ export const ChatContainer = styled.div`
 `;
 
 export const ChatBottom = styled.div`
-  padding-bottom: 10em;
+  padding-bottom: 8em;
 `;

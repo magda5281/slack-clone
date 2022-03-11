@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SidebarContainer = styled.div`
+  /* transform: translateX(-100%); */
   background-color: var(--slack-color);
   color: white;
   flex: 0.3;
