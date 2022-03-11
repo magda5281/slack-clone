@@ -1,5 +1,50 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## slack-clone - React-redux app
+
+## Hosting
+
+You can preview this project <a href ="https://slack-clone-81998.web.app/" target = "_blank">here</a>
+
+## Overview
+
+slack-clone app is a portfolio personal project to further develop and learn front end technologies. It is a website that allows users to login/logout with google authentication, add a chat channel, open a channel, compose a chat message which will show up in the selected chat channel. The app includes elements of responsive design.
+
+## Technologies
+
+This project was created using the following technologies:
+
+- CSS
+- styled components
+- JavaScript
+- ReactJS (react-firebase-hooks)
+- Redux
+- Firebase (v9 modular)
+- Material-ui
+
+  ![](https://res.cloudinary.com/practicaldev/image/fetch/s--pvrcwKD5--/c_imagga_scale,f_auto,fl_progressive,h_48,q_auto,w_48/https://dev-to-uploads.s3.amazonaws.com/i/x31w2x9njuj19e9xb00t.png)
+  ![](https://img.icons8.com/color/48/000000/javascript--v1.png)
+  ![](https://img.icons8.com/office/40/000000/react.png)
+  ![](https://img.icons8.com/color/48/000000/redux.png")
+  ![](https://img.icons8.com/color/48/000000/firebase.png)
+  ![](https://img.icons8.com/color/48/000000/material-ui.png)
+
+## Project features
+
+- Firebase google authentication - login, logout <br>
+  <!-- ![login/logout demo]() -->
+- Firestore connected ReactForm<br>
+  <!-- ![add channel, add messsages]() -->
+
+- Redux controlled state of component <br>
+  <!-- ![controling the component state with redux]() -->
+
+- scrollintoView feature on opening the channel
+
+- elements of responsive design
+
+---
+
 ## Available Scripts
 
 In the project directory, you can run:
