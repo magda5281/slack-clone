@@ -31,7 +31,7 @@ export const HeaderSearch = styled.div`
     text-align: center;
     outline: none;
     color: white;
-    flex: 0.8;
+    flex: 1;
 
     @media screen and (max-width: 315px) {
       width: 10vmin;
@@ -39,10 +39,6 @@ export const HeaderSearch = styled.div`
   }
   > ::placeholder {
     font-size: 0.625rem;
-  }
-
-  > .MuiSvgIcon-root {
-    flex: 0.2;
   }
 `;
 
